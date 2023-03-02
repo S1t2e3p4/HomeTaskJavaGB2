@@ -11,7 +11,7 @@ public class HTask21 {
         System.out.printf("Сумма простых чисел = %d", getSum(0));
     }
 
-    public static int getSum(int sumOfPrimeNumbersm) {
+    public static int getSum(int sumOfPrimeNumbers) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Введите число, равное длинне Вашей последовательности чисел, и нажмите enter: ");
         int n = scanner.nextInt();
@@ -20,7 +20,7 @@ public class HTask21 {
         for (int i = 0; i < n; i++) {
             int num = scanner.nextInt();
             if (Math.abs(num) == 1 || Math.abs(num) == 2 || Math.abs(num) == 3) {
-                sumOfPrimeNumbersm += num;
+                sumOfPrimeNumbers += num;
             } else if (num % 2 == 0) {
                 continue;
             } else {
@@ -33,11 +33,11 @@ public class HTask21 {
                 }
 
                 if (num % j != 0) {
-                    sumOfPrimeNumbersm += num;
+                    sumOfPrimeNumbers += num;
                 }
             }
         }
         scanner.close();
-        return sumOfPrimeNumbersm;
+        return sumOfPrimeNumbers;
     }
 }
